@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://jmq7s5joko6x"]
+
+[ext_resource type="Script" uid="uid://cr0w7yy63prjr" path="res://SCRIPT/fazendeiro.gd" id="1_qaw0a"]
+[ext_resource type="Texture2D" uid="uid://mqtpevyitdxi" path="res://icon.svg" id="2_5d0rx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ueg2"]
+size = Vector2(42, 44)
+
+[node name="FAZENDEIRO" type="CharacterBody2D"]
+script = ExtResource("1_qaw0a")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_5d0rx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_4ueg2")
+disabled = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)

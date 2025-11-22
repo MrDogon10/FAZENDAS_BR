@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://cjem1xeqf61ln"]
+
+[ext_resource type="PackedScene" uid="uid://jmq7s5joko6x" path="res://CENAS/fazendeiro.tscn" id="1_edxgb"]
+[ext_resource type="Texture2D" uid="uid://dp8rwrpbt2oc3" path="res://ASSETS/png-transparent-arrow-directional-arrows-image-file-formats-text-logo3.png" id="2_88x4q"]
+[ext_resource type="Texture2D" uid="uid://bblfwy3rfk0pp" path="res://ASSETS/png-transparent-arrow-directional-arrows-image-file-formats-text-logo2.png" id="3_sg5sb"]
+[ext_resource type="Texture2D" uid="uid://bn6s2eamfnxje" path="res://ASSETS/png-transparent-arrow-directional-arrows-image-file-formats-text-logo.png" id="4_cnjcg"]
+[ext_resource type="Texture2D" uid="uid://c0dqo3t6j8ow5" path="res://ASSETS/png-transparent-arrow-directional-arrows-image-file-formats-text-logo4.png" id="5_aeayd"]
+
+[node name="CENA PRINCIPAL" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 295.0
+offset_top = 324.0
+offset_right = 839.0
+offset_bottom = 362.0
+
+[node name="FAZENDEIRO" parent="." instance=ExtResource("1_edxgb")]
+position = Vector2(577, 324)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="up" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2(127, 431)
+scale = Vector2(0.3091787, 0.21487617)
+texture_normal = ExtResource("2_88x4q")
+texture_pressed = ExtResource("2_88x4q")
+action = "up"
+
+[node name="down" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2(127, 485)
+scale = Vector2(0.32999995, 0.23275875)
+texture_normal = ExtResource("3_sg5sb")
+texture_pressed = ExtResource("3_sg5sb")
+action = "down"
+
+[node name="left" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2(67, 484)
+scale = Vector2(0.24892703, 0.20817845)
+texture_normal = ExtResource("4_cnjcg")
+texture_pressed = ExtResource("4_cnjcg")
+action = "left"
+
+[node name="right" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2(197, 484)
+scale = Vector2(0.24892698, 0.29629627)
+texture_normal = ExtResource("5_aeayd")
+texture_pressed = ExtResource("5_aeayd")
+action = "right"
