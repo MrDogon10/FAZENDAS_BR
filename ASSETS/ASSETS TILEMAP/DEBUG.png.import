@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bn6s2eamfnxje"
-path="res://.godot/imported/png-transparent-arrow-directional-arrows-image-file-formats-text-logo.png-fa54027ac1ec2cdc876c99e9787ae276.ctex"
+uid="uid://gubv34j8dfla"
+path="res://.godot/imported/DEBUG.png-d19669af01f908acd1444b6312fc4088.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ASSETS/png-transparent-arrow-directional-arrows-image-file-formats-text-logo.png"
-dest_files=["res://.godot/imported/png-transparent-arrow-directional-arrows-image-file-formats-text-logo.png-fa54027ac1ec2cdc876c99e9787ae276.ctex"]
+source_file="res://ASSETS/ASSETS TILEMAP/DEBUG.png"
+dest_files=["res://.godot/imported/DEBUG.png-d19669af01f908acd1444b6312fc4088.ctex"]
 
 [params]
 

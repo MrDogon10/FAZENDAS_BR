@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2jkeeal21css"]
+
+[ext_resource type="Script" uid="uid://djflkikkc18uv" path="res://SCRIPT/terra_arada.gd" id="1_oigvx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_habuh"]
+size = Vector2(10, 10)
+
+[node name="terra_arada" type="Area2D"]
+z_index = 3
+script = ExtResource("1_oigvx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_habuh")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 5.0
+offset_bottom = 5.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+hframes = 16
+vframes = 16
+frame = 184
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
