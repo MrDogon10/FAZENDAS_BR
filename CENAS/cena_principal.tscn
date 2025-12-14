@@ -1,9 +1,10 @@
-[gd_scene load_steps=16 format=3 uid="uid://cjem1xeqf61ln"]
+[gd_scene load_steps=17 format=3 uid="uid://cjem1xeqf61ln"]
 
 [ext_resource type="Texture2D" uid="uid://c1npopsa6stny" path="res://ASSETS/ASSETS TILEMAP/vectoraith_tileset_farmingsims_terrain_spring_expanded.png" id="1_4ueg2"]
 [ext_resource type="Script" uid="uid://cv007sqkbgusr" path="res://SCRIPT/config.gd" id="1_cnjcg"]
 [ext_resource type="PackedScene" uid="uid://jmq7s5joko6x" path="res://CENAS/fazendeiro.tscn" id="1_edxgb"]
 [ext_resource type="Texture2D" uid="uid://b8ofyk5kujess" path="res://ASSETS/ASSETS TILEMAP/vectoraith_tileset_farmingsims_details.png" id="2_88x4q"]
+[ext_resource type="Script" uid="uid://ebbkap53od4q" path="res://SCRIPT/HUD.gd" id="2_j1csu"]
 [ext_resource type="Texture2D" uid="uid://37d7ovf62h6g" path="res://ASSETS/BOTAOREF.png" id="3_88x4q"]
 [ext_resource type="Script" uid="uid://bjxw31kjgkyep" path="res://SCRIPT/ARAR.gd" id="4_4p8gl"]
 [ext_resource type="PackedScene" uid="uid://bx0ag8fl0ds05" path="res://CENAS/maca.tscn" id="6_cnjcg"]
@@ -414,14 +415,37 @@ sources/1 = SubResource("TileSetAtlasSource_2al33")
 script = ExtResource("1_cnjcg")
 
 [node name="HUD" type="CanvasLayer" parent="config"]
+script = ExtResource("2_j1csu")
 
-[node name="info" type="Label" parent="config/HUD"]
-offset_left = 6.0
-offset_top = 10.0
-offset_right = 46.0
-offset_bottom = 59.0
-text = "aoba
+[node name="MONEY" type="Label" parent="config/HUD"]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 67.0
+offset_bottom = 57.0
+text = "MONEY
 "
+
+[node name="inf_tomate" type="Label" parent="config/HUD"]
+offset_left = 8.0
+offset_top = 80.0
+offset_right = 73.0
+offset_bottom = 129.0
+text = "TOMATE
+"
+
+[node name="inf_semente" type="Label" parent="config/HUD"]
+offset_left = 8.0
+offset_top = 56.0
+offset_right = 80.0
+offset_bottom = 104.0
+text = "SEMENTE"
+
+[node name="inf_maca" type="Label" parent="config/HUD"]
+offset_left = 8.0
+offset_top = 32.0
+offset_right = 55.0
+offset_bottom = 81.0
+text = "MACA"
 
 [node name="MOBILE" type="CanvasLayer" parent="config"]
 
@@ -506,7 +530,7 @@ layer_2/name = "arvores"
 layer_2/z_index = 1
 layer_2/tile_data = PackedInt32Array(917539, 589826, 6, 1179685, 589826, 6, 983079, 589826, 6)
 layer_3/name = "ARAR"
-layer_3/modulate = Color(1, 1, 1, 0.3019608)
+layer_3/modulate = Color(1, 1, 1, 0.05882353)
 layer_3/z_index = 5
 layer_3/navigation_enabled = false
 layer_3/tile_data = PackedInt32Array(1507368, 1, 0, 1572904, 1, 0, 1638440, 1, 0, 1703976, 1, 0, 1507369, 1, 0, 1572905, 1, 0, 1638441, 1, 0, 1703977, 1, 0, 1507370, 1, 0, 1572906, 1, 0, 1638442, 1, 0, 1703978, 1, 0, 1507371, 1, 0, 1572907, 1, 0, 1638443, 1, 0, 1703979, 1, 0, 1507372, 1, 0, 1572908, 1, 0, 1638444, 1, 0, 1703980, 1, 0, 1048604, 1, 0, 1048605, 1, 0, 1048606, 1, 0, 1048607, 1, 0, 1114140, 1, 0, 1114141, 1, 0, 1114142, 1, 0, 1114143, 1, 0, 1179676, 1, 0, 1179677, 1, 0, 1179678, 1, 0, 1179679, 1, 0)

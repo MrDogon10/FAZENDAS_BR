@@ -17,6 +17,19 @@ func _ready() -> void:
 		#print("Player e TileMap encontrados ✅")
 	#else:
 		#print("ERRO: Player ou TileMap não encontrados ❌")
+func tem_algo_na_celula(cell: Vector2i) -> bool:
+	for child in get_parent().get_children():
+		if not child is Node2D:
+			continue
+
+		var child_local = tile_map.to_local(child.global_position)
+		var child_cell = tile_map.local_to_map(child_local)
+
+		if child_cell == cell:
+			return true
+
+	return false
+
 
 func _physics_process(delta: float) -> void:
 	if PLAYER == null or tile_map == null:
@@ -40,11 +53,12 @@ func _physics_process(delta: float) -> void:
 		#print(PODE_ARAR)
 		#print("Player NAO está sobre um tile  ❌")
 	#print(PODE_ARAR)
-	if PODE_ARAR == true:
-		if Input.is_action_just_released("interagir"):
-			#print("debug")
-			var instance = TERRA_ARADA.instantiate()
-			# converte a cell para a posição global certinha
-			var tile_global_pos = tile_map.to_global(tile_map.map_to_local(cell))
-			instance.position = tile_global_pos
-			get_parent().add_child(instance)
+	if PODE_ARAR == true and Input.is_action_just_released("interagir"):
+		if tem_algo_na_celula(cell):
+			return # já tem algo ali, não ara
+		#print("debug")
+		var instance = TERRA_ARADA.instantiate()
+		# converte a cell para a posição global certinha
+		var tile_global_pos = tile_map.to_global(tile_map.map_to_local(cell))
+		instance.position = tile_global_pos
+		get_parent().add_child(instance)

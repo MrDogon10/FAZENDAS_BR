@@ -9,16 +9,26 @@ size = Vector2(10, 10)
 script = ExtResource("1_yn7nv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("RectangleShape2D_yn7nv")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 offset_left = -5.0
 offset_top = -5.0
 offset_right = 5.0
 offset_bottom = 5.0
-color = Color(1, 1, 0.5199774, 0.66200006)
+color = Color(1, 0, 0, 0.6627451)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+z_index = 2
+offset_left = -5.0
+offset_right = 5.0
+offset_bottom = 5.0
+color = Color(1, 0, 0, 0.6627451)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 hframes = 16
 vframes = 16
 frame = 184

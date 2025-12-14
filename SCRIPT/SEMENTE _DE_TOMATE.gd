@@ -11,13 +11,17 @@ var  ESTAGIO = 0
 func _ready() -> void:
 	
 	await get_tree().create_timer(2).timeout
+	ESTAGIO += 1
 	print("STAGE1")
 	await get_tree().create_timer(2).timeout
+	ESTAGIO += 1
 	print("STAGE2")
 	await get_tree().create_timer(2).timeout
+	ESTAGIO += 1
 	print("STAGE3")
 	await get_tree().create_timer(2).timeout
-	ESTAGIO = 4
+	ESTAGIO += 1
+	print(ESTAGIO)
 	if ESTAGIO == 4:
 		COLHEITA_PRONTA = true
 		
