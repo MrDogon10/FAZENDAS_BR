@@ -3,6 +3,9 @@ var COLHEITA_PRONTA = false
 var COLHER = false
 var  ESTAGIO = 0
 
+@onready var animate:= $TOMATO
+
+
 
 #var PLANTAVEL = false
 #var SUFICIENTE = false
@@ -12,17 +15,18 @@ func _ready() -> void:
 	
 	await get_tree().create_timer(2).timeout
 	ESTAGIO += 1
-	print("STAGE1")
+	animate.frame = 1
+	
 	await get_tree().create_timer(2).timeout
 	ESTAGIO += 1
-	print("STAGE2")
+	animate.frame = 2
+	
 	await get_tree().create_timer(2).timeout
 	ESTAGIO += 1
-	print("STAGE3")
-	await get_tree().create_timer(2).timeout
-	ESTAGIO += 1
-	print(ESTAGIO)
-	if ESTAGIO == 4:
+	animate.frame = 3
+	
+	
+	if ESTAGIO == 3:
 		COLHEITA_PRONTA = true
 		
 func _physics_process(delta: float) -> void:

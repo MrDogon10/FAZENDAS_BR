@@ -3,7 +3,7 @@ var SEMENTE = 5
 var MACA = 0
 var TOMATE = 2
 var  MONEY = 200
-
+var  EQUIP = "ENXADA"
 
 
 

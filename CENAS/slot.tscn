@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8xaalwfwglpv"]
+
+[ext_resource type="Script" uid="uid://0205lekovpwh" path="res://SCRIPT/slot.gd" id="1_tlq0y"]
+[ext_resource type="Texture2D" uid="uid://bm6i5i7kvc5py" path="res://ASSETS/ASSEETS INVENTARIO/inventario3.png" id="1_v5iap"]
+
+[node name="slot" type="Control"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 3
+anchor_right = 0.052083332
+anchor_bottom = 0.09259259
+offset_left = -2.0
+offset_top = -2.000002
+offset_right = 2.0
+offset_bottom = 2.0000038
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_tlq0y")
+metadata/_edit_use_anchors_ = true
+
+[node name="background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_v5iap")
+
+[node name="sprite" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.079
+anchor_bottom = 0.15900001
+offset_right = 55.26
+offset_bottom = 50.46
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="amount" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -31.0
+offset_top = -23.0
+offset_right = -3.0
+grow_horizontal = 0
+grow_vertical = 0
+horizontal_alignment = 2
+autowrap_trim_flags = 128

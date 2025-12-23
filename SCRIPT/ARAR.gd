@@ -32,6 +32,8 @@ func tem_algo_na_celula(cell: Vector2i) -> bool:
 
 
 func _physics_process(delta: float) -> void:
+	if GlobalDados.EQUIP != "ENXADA":
+		return
 	if PLAYER == null or tile_map == null:
 		return
 	if TERRA_ARADA == null or tile_map == null:

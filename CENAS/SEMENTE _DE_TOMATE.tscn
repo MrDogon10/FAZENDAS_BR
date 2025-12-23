@@ -1,37 +1,64 @@
-[gd_scene load_steps=3 format=3 uid="uid://b82tqxj5gp4jn"]
+[gd_scene load_steps=9 format=3 uid="uid://b82tqxj5gp4jn"]
 
 [ext_resource type="Script" uid="uid://dwea7jehchfto" path="res://SCRIPT/SEMENTE _DE_TOMATE.gd" id="1_yn7nv"]
+[ext_resource type="Texture2D" uid="uid://82wk0o7dnv2x" path="res://ASSETS/ASSETS PLANTAS/Crop_Spritesheet.png" id="2_yxgse"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yn7nv"]
 size = Vector2(10, 10)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_m1fn5"]
+atlas = ExtResource("2_yxgse")
+region = Rect2(64, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kexuk"]
+atlas = ExtResource("2_yxgse")
+region = Rect2(48, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xk8ru"]
+atlas = ExtResource("2_yxgse")
+region = Rect2(32, 96, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gy66i"]
+atlas = ExtResource("2_yxgse")
+region = Rect2(16, 96, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vxro3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m1fn5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kexuk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xk8ru")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gy66i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="SEMENTE _DE_TOMATE" type="Area2D"]
+z_index = 2
 script = ExtResource("1_yn7nv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 shape = SubResource("RectangleShape2D_yn7nv")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-visible = false
-offset_left = -5.0
-offset_top = -5.0
-offset_right = 5.0
-offset_bottom = 5.0
-color = Color(1, 0, 0, 0.6627451)
-
 [node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
 z_index = 2
 offset_left = -5.0
 offset_right = 5.0
 offset_bottom = 5.0
 color = Color(1, 0, 0, 0.6627451)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
-hframes = 16
-vframes = 16
-frame = 184
+[node name="TOMATO" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_vxro3")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

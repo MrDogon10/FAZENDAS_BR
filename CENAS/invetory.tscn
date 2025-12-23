@@ -1,0 +1,90 @@
+[gd_scene load_steps=5 format=3 uid="uid://dybxp4uqw73cj"]
+
+[ext_resource type="Texture2D" uid="uid://bm6i5i7kvc5py" path="res://ASSETS/ASSEETS INVENTARIO/inventario3.png" id="1_63bfw"]
+[ext_resource type="PackedScene" uid="uid://c8xaalwfwglpv" path="res://CENAS/slot.tscn" id="2_nrrpf"]
+[ext_resource type="Texture2D" uid="uid://u10f8wfapybe" path="res://ASSETS/ASSEETS INVENTARIO/OBJ3.png" id="4_o6ea4"]
+[ext_resource type="Texture2D" uid="uid://bsemsi4hspdr" path="res://ASSETS/ASSEETS INVENTARIO/OBJ2.png" id="4_uef11"]
+
+[node name="inventory" type="TextureRect"]
+custom_minimum_size = Vector2(600, 385)
+anchors_preset = -1
+anchor_right = 0.5208333
+anchor_bottom = 0.5941358
+mouse_filter = 2
+texture = ExtResource("1_63bfw")
+
+[node name="container" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.12
+anchor_top = 0.124675326
+anchor_right = 0.88
+anchor_bottom = 0.8727273
+offset_left = 27.0
+offset_top = 8.0
+offset_right = -24.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 4
+theme_override_constants/v_separation = 4
+columns = 6
+
+[node name="slot" parent="container" instance=ExtResource("2_nrrpf")]
+layout_mode = 2
+
+[node name="slot2" parent="container" instance=ExtResource("2_nrrpf")]
+layout_mode = 2
+
+[node name="sprite" parent="container/slot2" index="1"]
+texture = ExtResource("4_uef11")
+
+[node name="amount" parent="container/slot2" index="2"]
+text = "20"
+
+[node name="slot3" parent="container" instance=ExtResource("2_nrrpf")]
+layout_mode = 2
+
+[node name="sprite" parent="container/slot3" index="1"]
+texture = ExtResource("4_o6ea4")
+
+[node name="amount" parent="container/slot3" index="2"]
+text = "5"
+
+[node name="slot4" parent="container" instance=ExtResource("2_nrrpf")]
+layout_mode = 2
+
+[node name="sprite" parent="container/slot4" index="1"]
+texture = ExtResource("4_o6ea4")
+
+[node name="amount" parent="container/slot4" index="2"]
+text = "2"
+
+[node name="slot5" parent="container" instance=ExtResource("2_nrrpf")]
+layout_mode = 2
+
+[node name="slot6" parent="container" instance=ExtResource("2_nrrpf")]
+layout_mode = 2
+
+[node name="container2" type="GridContainer" parent="."]
+modulate = Color(0, 1, 1, 1)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -32.0
+offset_top = -64.0
+offset_right = 32.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/h_separation = 1
+theme_override_constants/v_separation = 1
+
+[node name="slot" parent="container2" instance=ExtResource("2_nrrpf")]
+layout_mode = 2
+
+[editable path="container/slot2"]
+[editable path="container/slot3"]
+[editable path="container/slot4"]
